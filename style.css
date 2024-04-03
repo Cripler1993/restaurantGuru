@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -mos-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* обнуляем заголовки h */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: #f6f6f6;
+  padding-top: 18px;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__search {
+  display: flex;
+  align-items: center;
+  max-width: 532px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  border: 1px solid #cfcfcf;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.search__line {
+  width: 1px;
+  height: 28px;
+  background-color: #cfcfcf;
+}
+.search__btn {
+  padding: 8.5px 14px;
+  background-color: #754040;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 20px;
+}
+
+.header__location {
+}
+.bread__crumbs {
+  background-color: #424242;
+  padding: 12px 0px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+.bread__crumbs-text {
+  max-width: 1220px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.restaurants {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.restaurants__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10.5px;
+}
+.restaurants__header h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  text-transform: capitalize;
+}
+.restaurants__items-row {
+}
+
+.restaurants__item {
+  max-width: 286px;
+}
+.restaurants__img {
+  width: 100%;
+  height: 192px;
+  background-image: url(./img/restaurant.png);
+  background-size: cover;
+  border-radius: 20px;
+}
+.restaurants__open {
+  display: inline-block;
+  padding: 8px 12px;
+
+  margin-top: 8.5px;
+  margin-left: 8px;
+  backdrop-filter: blur(48px);
+  background: rgba(47, 34, 36, 0.16);
+  border-radius: 16px;
+}
+.restaurants__description {
+}
+.description__left {
+}
+.description__right {
+}
+
+/* bread crumbs пробелы не подойдут? */
+/* restaurants open градиент? */
