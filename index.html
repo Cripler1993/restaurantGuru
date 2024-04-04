@@ -13,15 +13,22 @@
         <img src="./img/logo.png" alt="" />
         <nav class="header__nav">
           <div class="header__search">
-            <p>найти: рестораны</p>
+            <span class="search__label">найти:</span>
+            <input
+              class="header__input-1"
+              type="text"
+              placeholder="рестораны"
+            />
             <div class="search__line"></div>
-            <p>где: москва</p>
+            <span class="search__label">где:</span>
+            <input class="header__input-2" type="text" placeholder="москва" />
           </div>
           <button class="search__btn">
             <img src="./img/Vector.png" alt="" />
           </button>
           <div class="header__location">
-            <img src="./img/russiaFlag.png" alt="" />
+            <img class="mainFlag" src="./img/russiaFlag.png" alt="" />
+            <div class="location__container"></div>
           </div>
         </nav>
       </div>
@@ -42,33 +49,197 @@
             </div>
             <div class="restaurants__description">
               <div class="description__left">
-                <h3>апшерон</h3>
-                <p>#4 ресторан в г. <span>подольск</span></p>
-                <p>
+                <h3 class="description__left-title">апшерон</h3>
+                <p class="description__left-location">
+                  #4 ресторан в г.
+                  <span style="text-transform: capitalize">подольск</span>
+                </p>
+                <p class="description-left-kitchen">
                   <img src="./img/restaurant_menu.png" alt="" /><span
                     >европейская, итальянская</span
                   >
                 </p>
-                <div>
+                <div class="description__left-price">
                   <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
-                  <p>
+                  <p class="price__line"></p>
+                  <p class="price__receipt">
                     <img src="./img/receipt_long.png" alt="" /><span
-                      >Средний чек: 1200₽</span
+                      >cредний чек: 1200₽</span
                     >
                   </p>
                 </div>
               </div>
               <div class="description__right">
-                <p>
+                <p class="description__right-rate">
                   <img src="./img/family_star.png" alt="" /><span>4.2</span
                   ><span>(842)</span>
                 </p>
-                <p>
+                <p class="description__right-road">
                   <img src="./img/directions_car.png" alt="" /><span
                     >12 мин</span
                   >
                 </p>
-                <p>6,2 км</p>
+                <p class="description__right-length">6,2 км</p>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants__item">
+            <div class="restaurants__img">
+              <div class="restaurants__open">открыто до <span>00:00</span></div>
+            </div>
+            <div class="restaurants__description">
+              <div class="description__left">
+                <h3 class="description__left-title">апшерон</h3>
+                <p class="description__left-location">
+                  #4 ресторан в г.
+                  <span style="text-transform: capitalize">подольск</span>
+                </p>
+                <p class="description-left-kitchen">
+                  <img src="./img/restaurant_menu.png" alt="" /><span
+                    >европейская, итальянская</span
+                  >
+                </p>
+                <div class="description__left-price">
+                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                  <p class="price__line"></p>
+                  <p class="price__receipt">
+                    <img src="./img/receipt_long.png" alt="" /><span
+                      >cредний чек: 1200₽</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="description__right">
+                <p class="description__right-rate">
+                  <img src="./img/family_star.png" alt="" /><span>4.2</span
+                  ><span>(842)</span>
+                </p>
+                <p class="description__right-road">
+                  <img src="./img/directions_car.png" alt="" /><span
+                    >12 мин</span
+                  >
+                </p>
+                <p class="description__right-length">6,2 км</p>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants__item">
+            <div class="restaurants__img">
+              <div class="restaurants__open">открыто до <span>00:00</span></div>
+            </div>
+            <div class="restaurants__description">
+              <div class="description__left">
+                <h3 class="description__left-title">апшерон</h3>
+                <p class="description__left-location">
+                  #4 ресторан в г.
+                  <span style="text-transform: capitalize">подольск</span>
+                </p>
+                <p class="description-left-kitchen">
+                  <img src="./img/restaurant_menu.png" alt="" /><span
+                    >европейская, итальянская</span
+                  >
+                </p>
+                <div class="description__left-price">
+                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                  <p class="price__line"></p>
+                  <p class="price__receipt">
+                    <img src="./img/receipt_long.png" alt="" /><span
+                      >cредний чек: 1200₽</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="description__right">
+                <p class="description__right-rate">
+                  <img src="./img/family_star.png" alt="" /><span>4.2</span
+                  ><span>(842)</span>
+                </p>
+                <p class="description__right-road">
+                  <img src="./img/directions_car.png" alt="" /><span
+                    >12 мин</span
+                  >
+                </p>
+                <p class="description__right-length">6,2 км</p>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants__item">
+            <div class="restaurants__img">
+              <div class="restaurants__open">открыто до <span>00:00</span></div>
+            </div>
+            <div class="restaurants__description">
+              <div class="description__left">
+                <h3 class="description__left-title">апшерон</h3>
+                <p class="description__left-location">
+                  #4 ресторан в г.
+                  <span style="text-transform: capitalize">подольск</span>
+                </p>
+                <p class="description-left-kitchen">
+                  <img src="./img/restaurant_menu.png" alt="" /><span
+                    >европейская, итальянская</span
+                  >
+                </p>
+                <div class="description__left-price">
+                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                  <p class="price__line"></p>
+                  <p class="price__receipt">
+                    <img src="./img/receipt_long.png" alt="" /><span
+                      >cредний чек: 1200₽</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="description__right">
+                <p class="description__right-rate">
+                  <img src="./img/family_star.png" alt="" /><span>4.2</span
+                  ><span>(842)</span>
+                </p>
+                <p class="description__right-road">
+                  <img src="./img/directions_car.png" alt="" /><span
+                    >12 мин</span
+                  >
+                </p>
+                <p class="description__right-length">6,2 км</p>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants__item">
+            <div class="restaurants__img">
+              <div class="restaurants__open">открыто до <span>00:00</span></div>
+            </div>
+            <div class="restaurants__description">
+              <div class="description__left">
+                <h3 class="description__left-title">апшерон</h3>
+                <p class="description__left-location">
+                  #4 ресторан в г.
+                  <span style="text-transform: capitalize">подольск</span>
+                </p>
+                <p class="description-left-kitchen">
+                  <img src="./img/restaurant_menu.png" alt="" /><span
+                    >европейская, итальянская</span
+                  >
+                </p>
+                <div class="description__left-price">
+                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                  <p class="price__line"></p>
+                  <p class="price__receipt">
+                    <img src="./img/receipt_long.png" alt="" /><span
+                      >cредний чек: 1200₽</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="description__right">
+                <p class="description__right-rate">
+                  <img src="./img/family_star.png" alt="" /><span>4.2</span
+                  ><span>(842)</span>
+                </p>
+                <p class="description__right-road">
+                  <img src="./img/directions_car.png" alt="" /><span
+                    >12 мин</span
+                  >
+                </p>
+                <p class="description__right-length">6,2 км</p>
               </div>
             </div>
           </div>
@@ -76,5 +247,13 @@
       </section>
     </main>
     <footer></footer>
+    <template id="language">
+      <div class="location">
+        <img class="languageFlag" src="./img/en.png" alt="" /><span
+          class="languageName"
+          >english</span
+        >
+      </div>
+    </template>
   </body>
 </html>

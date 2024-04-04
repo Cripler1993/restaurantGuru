@@ -70,7 +70,7 @@ ul li {
 img {
   vertical-align: top;
 }
-/* обнуляем заголовки h */
+
 h1,
 h2,
 h3,
@@ -84,11 +84,13 @@ h6 {
 body {
   background-color: #f6f6f6;
   padding-top: 18px;
+  margin: 0 auto;
 }
 
 .header {
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
+  padding-left: 13px;
 }
 .header__row {
   display: flex;
@@ -109,12 +111,49 @@ body {
   border: 1px solid #cfcfcf;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  padding: 0px 12px;
+}
+.search__label {
+  color: rgb(1, 1, 1);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: capitalize;
+  margin-right: 8px;
+}
+.header__input-1 {
+  max-width: 206px;
+  width: 100%;
+  background-color: #f6f6f6;
+  margin-right: 27px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 38px;
+}
+.header__input-1::placeholder {
+  color: rgb(1, 1, 1);
+  text-transform: capitalize;
 }
 .search__line {
   width: 1px;
   height: 28px;
   background-color: #cfcfcf;
+  margin-right: 16px;
 }
+.header__input-2 {
+  max-width: 154px;
+  width: 100%;
+  color: rgb(1, 1, 1);
+  background-color: #f6f6f6;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 38px;
+}
+.header__input-2::placeholder {
+  color: rgb(1, 1, 1);
+  text-transform: capitalize;
+}
+
 .search__btn {
   padding: 8.5px 14px;
   background-color: #754040;
@@ -124,6 +163,32 @@ body {
 }
 
 .header__location {
+  position: relative;
+}
+.location__container {
+  display: none;
+  position: absolute;
+  top: -11px;
+  right: -10px;
+  padding: 10px 18px 4px 18px;
+  width: 165px;
+  height: 0px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 0px 8px 0px rgba(134, 135, 137, 0.25);
+  background: rgb(255, 255, 255);
+  transition: all 0.2s ease 0s;
+}
+.location {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  padding: 11px 0px;
+}
+.location span {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: capitalize;
 }
 .bread__crumbs {
   background-color: #424242;
@@ -133,6 +198,7 @@ body {
 }
 .bread__crumbs-text {
   max-width: 1220px;
+  padding-left: 10px;
   margin: 0 auto;
   font-size: 14px;
   font-weight: 400;
@@ -143,11 +209,12 @@ body {
 .restaurants {
   max-width: 1220px;
   margin: 0 auto;
+  padding-left: 18px;
 }
 .restaurants__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 10.5px;
 }
 .restaurants__header h1 {
@@ -156,11 +223,29 @@ body {
   line-height: 35px;
   text-transform: capitalize;
 }
+.restaurants__header div {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17.58px;
+  opacity: 60%;
+  margin-bottom: 4px;
+}
+.restaurants__header div::first-letter {
+  text-transform: capitalize;
+}
+.restaurants__header div:hover {
+  opacity: 100%;
+}
 .restaurants__items-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  overflow: hidden;
 }
 
 .restaurants__item {
-  max-width: 286px;
+  min-width: 286px;
 }
 .restaurants__img {
   width: 100%;
@@ -168,23 +253,139 @@ body {
   background-image: url(./img/restaurant.png);
   background-size: cover;
   border-radius: 20px;
+  margin-bottom: 8.5px;
 }
 .restaurants__open {
   display: inline-block;
   padding: 8px 12px;
-
   margin-top: 8.5px;
   margin-left: 8px;
   backdrop-filter: blur(48px);
   background: rgba(47, 34, 36, 0.16);
   border-radius: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16.25px;
+  color: rgba(208, 200, 201, 1);
+}
+.restaurants__open::first-letter {
+  text-transform: capitalize;
+}
+.restaurants__open span {
+  color: rgba(246, 244, 244, 1);
 }
 .restaurants__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .description__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.description__left-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 1.5px;
+  color: rgb(91, 72, 74);
+  text-transform: capitalize;
+}
+.description__left-location {
+  color: rgb(132, 113, 115, 1);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 125%;
+  margin-bottom: 2.5px;
+}
+.description-left-kitchen {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5px;
+}
+.description-left-kitchen span {
+  margin-left: 10.5px;
+  color: rgba(88, 75, 77, 1);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 125%;
+  text-transform: capitalize;
+}
+.description__left-price {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.price__line {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(171, 156, 158, 1);
+  border-radius: 2px;
+}
+.price__receipt {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+.price__receipt span {
+  color: rgb(88, 75, 77);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 125%;
+}
+.price__receipt span::first-letter {
+  text-transform: capitalize;
 }
 .description__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.description__right-rate {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-bottom: 4px;
+}
+.description__right-rate span:nth-child(2) {
+  /* font-family: Inter; */
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: rgba(167, 37, 54, 1);
+}
+.description__right-rate span:last-child {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  color: rgba(171, 156, 158, 1);
+}
+.description__right-road {
+  display: flex;
+  align-items: center;
+  column-gap: 6.5px;
+  margin-bottom: 4px;
+}
+.description__right-road span {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 11px;
+  color: rgba(88, 75, 77, 1);
+}
+.description__right-length {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 13.75px;
+  color: rgba(132, 113, 115, 1);
+}
+
+.active {
+  height: 200px;
+  display: flex;
 }
 
 /* bread crumbs пробелы не подойдут? */
 /* restaurants open градиент? */
+/* при адаптивной верстке контейнер съезжает решить паддингом или зафиксировать по другому? */
+/* iter, roboto, acrobat */
