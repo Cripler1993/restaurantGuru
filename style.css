@@ -262,8 +262,15 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
   text-transform: capitalize;
+}
+.bread__crumbs-text a {
+  color: rgba(255, 255, 255, 1);
+}
+.bread__crumbs-text span {
+  margin-left: 5.5px;
+  margin-right: 1.5px;
 }
 @media (max-width: 920px) {
   .bread__crumbs-text {
@@ -304,6 +311,7 @@ body {
   font-weight: 500;
   line-height: 35px;
   text-transform: capitalize;
+  margin-left: 8px;
 }
 .restaurants__header div {
   font-size: 15px;
@@ -322,7 +330,6 @@ body {
 @media (max-width: 620px) {
   .restaurants {
     margin-top: 24px;
-    /* max-width: 614px; */
   }
   .restaurants__header h1 {
     font-size: 24px;
@@ -424,6 +431,7 @@ body {
   font-size: 11px;
   font-weight: 500;
   line-height: 125%;
+  white-space: nowrap;
 }
 .price__receipt span::first-letter {
   text-transform: capitalize;
@@ -474,10 +482,14 @@ body {
   line-height: 13.75px;
   color: rgba(132, 113, 115, 1);
 }
-.swiper-button-next-img {
+/* cлайдер */
+.swiper {
+  padding: 0px 8px;
+}
+.swiper-button-prev-img {
   position: absolute;
-  bottom: 46%;
-  right: -20px;
+  bottom: 47%;
+  left: -15px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -485,10 +497,32 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(246, 246, 246, 1);
-  z-index: 3 !important;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.swiper-button-next-img {
+  position: absolute;
+  bottom: 48%;
+  right: -15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(246, 246, 246, 1);
+  z-index: 3;
+  cursor: pointer;
+}
+.swiper-button-disabled {
+  opacity: 0;
 }
 .swiper-button-next-img img:hover {
   fill: #754040;
+}
+.swiper-button-prev-img img {
+  transform: rotate(180deg);
 }
 @media (max-width: 620px) {
   .description__left-title {
@@ -522,6 +556,18 @@ body {
   .adaptive__price {
     display: flex;
   }
+  .swiper-button-prev-img {
+    display: none;
+  }
+
+  .swiper-button-next-img {
+    display: none;
+  }
+}
+@media (max-width: 325px) {
+  .description__left-kitchen span {
+    margin-left: 7.5px;
+  }
 }
 
 .location__container-active {
@@ -529,6 +575,5 @@ body {
   padding: 10px 18px 4px 18px;
 }
 
-/* ширина картинки min width 360+ */
-/* поменять  p на ссылки*/
+/* переделать контейнер языков */
 /* user select */
