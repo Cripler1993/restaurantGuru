@@ -4,13 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Guru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="./style.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__row">
-        <img src="./img/logo.png" alt="" />
+        <img class="header__logo" src="./img/logo.png" alt="" />
+        <img
+          class="header__logo-adaptive"
+          src="./img/Link → logo_restaurantguru.svg.png"
+          alt=""
+        />
         <nav class="header__nav">
           <div class="header__search">
             <span class="search__label">найти:</span>
@@ -27,14 +44,26 @@
             <img src="./img/Vector.png" alt="" />
           </button>
           <div class="header__location">
-            <img class="mainFlag" src="./img/russiaFlag.png" alt="" />
-            <div class="location__container"></div>
+            <img
+              class="mainFlag"
+              style="cursor: pointer"
+              src="./img/russiaFlag.png"
+              alt=""
+            />
+            <div class="location__container">
+              <div class="location__container-close">
+                <img src="./img/Vector.svg" alt="" />
+                <img src="./img/Vector (1).svg" alt="" />
+              </div>
+              <div class="location__container-languages"></div>
+            </div>
           </div>
         </nav>
       </div>
     </header>
     <main>
       <section class="bread__crumbs">
+        <!-- поменять на ссылки -->
         <p class="bread__crumbs-text">главная /россия /москва /рестораны</p>
       </section>
       <section class="restaurants">
@@ -43,204 +72,256 @@
           <div>все рестораны</div>
         </div>
         <div class="restaurants__items-row">
-          <div class="restaurants__item">
-            <div class="restaurants__img">
-              <div class="restaurants__open">открыто до <span>00:00</span></div>
-            </div>
-            <div class="restaurants__description">
-              <div class="description__left">
-                <h3 class="description__left-title">апшерон</h3>
-                <p class="description__left-location">
-                  #4 ресторан в г.
-                  <span style="text-transform: capitalize">подольск</span>
-                </p>
-                <p class="description-left-kitchen">
-                  <img src="./img/restaurant_menu.png" alt="" /><span
-                    >европейская, итальянская</span
-                  >
-                </p>
-                <div class="description__left-price">
-                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
-                  <p class="price__line"></p>
-                  <p class="price__receipt">
-                    <img src="./img/receipt_long.png" alt="" /><span
-                      >cредний чек: 1200₽</span
-                    >
-                  </p>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="restaurants__item">
+                  <div class="restaurants__img">
+                    <div class="restaurants__open">
+                      открыто до <span>00:00</span>
+                    </div>
+                  </div>
+                  <div class="restaurants__description">
+                    <div class="description__left">
+                      <h3 class="description__left-title">апшерон</h3>
+                      <p class="description__left-location order__0">
+                        #4 ресторан в г.
+                        <span style="text-transform: capitalize">подольск</span>
+                      </p>
+                      <p class="description__left-kitchen">
+                        <img src="./img/restaurant_menu.png" alt="" /><span
+                          >европейская, итальянская</span
+                        >
+                      </p>
+                      <div class="description__left-price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <p class="price__line"></p>
+                        <p class="price__receipt">
+                          <img src="./img/receipt_long.png" alt="" /><span
+                            >cредний чек: 1200₽</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description__right">
+                      <p class="description__right-rate">
+                        <img src="./img/family_star.png" alt="" /><span
+                          >4.2</span
+                        ><span>(842)</span>
+                      </p>
+                      <p class="adaptive__price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                      </p>
+                      <p class="description__right-road">
+                        <img src="./img/directions_car.png" alt="" /><span
+                          >12 мин</span
+                        >
+                      </p>
+                      <p class="description__right-length">6,2 км</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="description__right">
-                <p class="description__right-rate">
-                  <img src="./img/family_star.png" alt="" /><span>4.2</span
-                  ><span>(842)</span>
-                </p>
-                <p class="description__right-road">
-                  <img src="./img/directions_car.png" alt="" /><span
-                    >12 мин</span
-                  >
-                </p>
-                <p class="description__right-length">6,2 км</p>
-              </div>
-            </div>
-          </div>
-          <div class="restaurants__item">
-            <div class="restaurants__img">
-              <div class="restaurants__open">открыто до <span>00:00</span></div>
-            </div>
-            <div class="restaurants__description">
-              <div class="description__left">
-                <h3 class="description__left-title">апшерон</h3>
-                <p class="description__left-location">
-                  #4 ресторан в г.
-                  <span style="text-transform: capitalize">подольск</span>
-                </p>
-                <p class="description-left-kitchen">
-                  <img src="./img/restaurant_menu.png" alt="" /><span
-                    >европейская, итальянская</span
-                  >
-                </p>
-                <div class="description__left-price">
-                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
-                  <p class="price__line"></p>
-                  <p class="price__receipt">
-                    <img src="./img/receipt_long.png" alt="" /><span
-                      >cредний чек: 1200₽</span
-                    >
-                  </p>
+              <div class="swiper-slide">
+                <div class="restaurants__item">
+                  <div class="restaurants__img">
+                    <div class="restaurants__open">
+                      открыто до <span>00:00</span>
+                    </div>
+                  </div>
+                  <div class="restaurants__description">
+                    <div class="description__left">
+                      <h3 class="description__left-title">апшерон</h3>
+                      <p class="description__left-location order__0">
+                        #4 ресторан в г.
+                        <span style="text-transform: capitalize">подольск</span>
+                      </p>
+                      <p class="description__left-kitchen">
+                        <img src="./img/restaurant_menu.png" alt="" /><span
+                          >европейская, итальянская</span
+                        >
+                      </p>
+                      <div class="description__left-price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <p class="price__line"></p>
+                        <p class="price__receipt">
+                          <img src="./img/receipt_long.png" alt="" /><span
+                            >cредний чек: 1200₽</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description__right">
+                      <p class="description__right-rate">
+                        <img src="./img/family_star.png" alt="" /><span
+                          >4.2</span
+                        ><span>(842)</span>
+                      </p>
+                      <p class="adaptive__price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                      </p>
+                      <p class="description__right-road">
+                        <img src="./img/directions_car.png" alt="" /><span
+                          >12 мин</span
+                        >
+                      </p>
+                      <p class="description__right-length">6,2 км</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="description__right">
-                <p class="description__right-rate">
-                  <img src="./img/family_star.png" alt="" /><span>4.2</span
-                  ><span>(842)</span>
-                </p>
-                <p class="description__right-road">
-                  <img src="./img/directions_car.png" alt="" /><span
-                    >12 мин</span
-                  >
-                </p>
-                <p class="description__right-length">6,2 км</p>
-              </div>
-            </div>
-          </div>
-          <div class="restaurants__item">
-            <div class="restaurants__img">
-              <div class="restaurants__open">открыто до <span>00:00</span></div>
-            </div>
-            <div class="restaurants__description">
-              <div class="description__left">
-                <h3 class="description__left-title">апшерон</h3>
-                <p class="description__left-location">
-                  #4 ресторан в г.
-                  <span style="text-transform: capitalize">подольск</span>
-                </p>
-                <p class="description-left-kitchen">
-                  <img src="./img/restaurant_menu.png" alt="" /><span
-                    >европейская, итальянская</span
-                  >
-                </p>
-                <div class="description__left-price">
-                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
-                  <p class="price__line"></p>
-                  <p class="price__receipt">
-                    <img src="./img/receipt_long.png" alt="" /><span
-                      >cредний чек: 1200₽</span
-                    >
-                  </p>
+              <div class="swiper-slide">
+                <div class="restaurants__item">
+                  <div class="restaurants__img">
+                    <div class="restaurants__open">
+                      открыто до <span>00:00</span>
+                    </div>
+                  </div>
+                  <div class="restaurants__description">
+                    <div class="description__left">
+                      <h3 class="description__left-title">апшерон</h3>
+                      <p class="description__left-location order__0">
+                        #4 ресторан в г.
+                        <span style="text-transform: capitalize">подольск</span>
+                      </p>
+                      <p class="description__left-kitchen">
+                        <img src="./img/restaurant_menu.png" alt="" /><span
+                          >европейская, итальянская</span
+                        >
+                      </p>
+                      <div class="description__left-price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <p class="price__line"></p>
+                        <p class="price__receipt">
+                          <img src="./img/receipt_long.png" alt="" /><span
+                            >cредний чек: 1200₽</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description__right">
+                      <p class="description__right-rate">
+                        <img src="./img/family_star.png" alt="" /><span
+                          >4.2</span
+                        ><span>(842)</span>
+                      </p>
+                      <p class="adaptive__price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                      </p>
+                      <p class="description__right-road">
+                        <img src="./img/directions_car.png" alt="" /><span
+                          >12 мин</span
+                        >
+                      </p>
+                      <p class="description__right-length">6,2 км</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="description__right">
-                <p class="description__right-rate">
-                  <img src="./img/family_star.png" alt="" /><span>4.2</span
-                  ><span>(842)</span>
-                </p>
-                <p class="description__right-road">
-                  <img src="./img/directions_car.png" alt="" /><span
-                    >12 мин</span
-                  >
-                </p>
-                <p class="description__right-length">6,2 км</p>
-              </div>
-            </div>
-          </div>
-          <div class="restaurants__item">
-            <div class="restaurants__img">
-              <div class="restaurants__open">открыто до <span>00:00</span></div>
-            </div>
-            <div class="restaurants__description">
-              <div class="description__left">
-                <h3 class="description__left-title">апшерон</h3>
-                <p class="description__left-location">
-                  #4 ресторан в г.
-                  <span style="text-transform: capitalize">подольск</span>
-                </p>
-                <p class="description-left-kitchen">
-                  <img src="./img/restaurant_menu.png" alt="" /><span
-                    >европейская, итальянская</span
-                  >
-                </p>
-                <div class="description__left-price">
-                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
-                  <p class="price__line"></p>
-                  <p class="price__receipt">
-                    <img src="./img/receipt_long.png" alt="" /><span
-                      >cредний чек: 1200₽</span
-                    >
-                  </p>
+              <div class="swiper-slide">
+                <div class="restaurants__item">
+                  <div class="restaurants__img">
+                    <div class="restaurants__open">
+                      открыто до <span>00:00</span>
+                    </div>
+                  </div>
+                  <div class="restaurants__description">
+                    <div class="description__left">
+                      <h3 class="description__left-title">апшерон</h3>
+                      <p class="description__left-location order__0">
+                        #4 ресторан в г.
+                        <span style="text-transform: capitalize">подольск</span>
+                      </p>
+                      <p class="description__left-kitchen">
+                        <img src="./img/restaurant_menu.png" alt="" /><span
+                          >европейская, итальянская</span
+                        >
+                      </p>
+                      <div class="description__left-price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <p class="price__line"></p>
+                        <p class="price__receipt">
+                          <img src="./img/receipt_long.png" alt="" /><span
+                            >cредний чек: 1200₽</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description__right">
+                      <p class="description__right-rate">
+                        <img src="./img/family_star.png" alt="" /><span
+                          >4.2</span
+                        ><span>(842)</span>
+                      </p>
+                      <p class="adaptive__price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                      </p>
+                      <p class="description__right-road">
+                        <img src="./img/directions_car.png" alt="" /><span
+                          >12 мин</span
+                        >
+                      </p>
+                      <p class="description__right-length">6,2 км</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="description__right">
-                <p class="description__right-rate">
-                  <img src="./img/family_star.png" alt="" /><span>4.2</span
-                  ><span>(842)</span>
-                </p>
-                <p class="description__right-road">
-                  <img src="./img/directions_car.png" alt="" /><span
-                    >12 мин</span
-                  >
-                </p>
-                <p class="description__right-length">6,2 км</p>
-              </div>
-            </div>
-          </div>
-          <div class="restaurants__item">
-            <div class="restaurants__img">
-              <div class="restaurants__open">открыто до <span>00:00</span></div>
-            </div>
-            <div class="restaurants__description">
-              <div class="description__left">
-                <h3 class="description__left-title">апшерон</h3>
-                <p class="description__left-location">
-                  #4 ресторан в г.
-                  <span style="text-transform: capitalize">подольск</span>
-                </p>
-                <p class="description-left-kitchen">
-                  <img src="./img/restaurant_menu.png" alt="" /><span
-                    >европейская, итальянская</span
-                  >
-                </p>
-                <div class="description__left-price">
-                  <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
-                  <p class="price__line"></p>
-                  <p class="price__receipt">
-                    <img src="./img/receipt_long.png" alt="" /><span
-                      >cредний чек: 1200₽</span
-                    >
-                  </p>
+              <div class="swiper-slide">
+                <div class="restaurants__item">
+                  <div class="restaurants__img">
+                    <div class="restaurants__open">
+                      открыто до <span>00:00</span>
+                    </div>
+                  </div>
+                  <div class="restaurants__description">
+                    <div class="description__left">
+                      <h3 class="description__left-title">апшерон</h3>
+                      <p class="description__left-location order__0">
+                        #4 ресторан в г.
+                        <span style="text-transform: capitalize">подольск</span>
+                      </p>
+                      <p class="description__left-kitchen">
+                        <img src="./img/restaurant_menu.png" alt="" /><span
+                          >европейская, итальянская</span
+                        >
+                      </p>
+                      <div class="description__left-price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <p class="price__line"></p>
+                        <p class="price__receipt">
+                          <img src="./img/receipt_long.png" alt="" /><span
+                            >cредний чек: 1200₽</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description__right">
+                      <p class="description__right-rate">
+                        <img src="./img/family_star.png" alt="" /><span
+                          >4.2</span
+                        ><span>(842)</span>
+                      </p>
+                      <p class="adaptive__price">
+                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                      </p>
+                      <p class="description__right-road">
+                        <img src="./img/directions_car.png" alt="" /><span
+                          >12 мин</span
+                        >
+                      </p>
+                      <p class="description__right-length">6,2 км</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="description__right">
-                <p class="description__right-rate">
-                  <img src="./img/family_star.png" alt="" /><span>4.2</span
-                  ><span>(842)</span>
-                </p>
-                <p class="description__right-road">
-                  <img src="./img/directions_car.png" alt="" /><span
-                    >12 мин</span
-                  >
-                </p>
-                <p class="description__right-length">6,2 км</p>
-              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next-img">
+              <img src="./img/rightBtn.svg" alt="" />
             </div>
           </div>
         </div>

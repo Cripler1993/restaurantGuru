@@ -80,22 +80,32 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
-
+@font-face {
+  font-family: Akrobat-Regular;
+  src: url("/fonts/Akrobat-Regular.otf");
+}
 body {
   background-color: #f6f6f6;
   padding-top: 18px;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif;
 }
 
+/* header */
 .header {
   max-width: 1220px;
   margin: 0 auto;
   padding-left: 13px;
+  padding-right: 10px;
 }
+
 .header__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__logo-adaptive {
+  display: none;
 }
 .header__nav {
   display: flex;
@@ -113,6 +123,7 @@ body {
   border-bottom-left-radius: 10px;
   padding: 0px 12px;
 }
+
 .search__label {
   color: rgb(1, 1, 1);
   font-size: 17px;
@@ -166,23 +177,36 @@ body {
   position: relative;
 }
 .location__container {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: -11px;
   right: -10px;
-  padding: 10px 18px 4px 18px;
+
   width: 165px;
   height: 0px;
+  overflow: hidden;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0px 0px 8px 0px rgba(134, 135, 137, 0.25);
   background: rgb(255, 255, 255);
-  transition: all 0.2s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.location__container-close {
+  position: relative;
+  margin-bottom: 18px;
+}
+.location__container-close img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
 }
 .location {
   display: flex;
   align-items: center;
   column-gap: 15px;
   padding: 11px 0px;
+  cursor: pointer;
 }
 .location span {
   font-size: 15px;
@@ -190,6 +214,41 @@ body {
   line-height: 18px;
   text-transform: capitalize;
 }
+@media (max-width: 920px) {
+  .header {
+    max-width: 620px;
+  }
+  .header__search {
+    display: none;
+  }
+  .search__btn {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  body {
+    padding-top: 0px;
+  }
+  .header {
+    border-bottom: 1px solid rgb(213, 216, 218);
+    background-color: rgb(255, 255, 255);
+    padding-top: 11.5px;
+    padding-bottom: 15.5px;
+    padding-left: 0px;
+  }
+
+  .header__logo {
+    display: none;
+  }
+  .header__logo-adaptive {
+    display: flex;
+    justify-self: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+/* теги */
 .bread__crumbs {
   background-color: #424242;
   padding: 12px 0px;
@@ -206,11 +265,33 @@ body {
   color: #ffffff;
   text-transform: capitalize;
 }
+@media (max-width: 920px) {
+  .bread__crumbs-text {
+    max-width: 614px;
+  }
+}
+@media (max-width: 620px) {
+  .bread__crumbs {
+    display: none;
+  }
+}
+/* рестораны */
 .restaurants {
   max-width: 1220px;
   margin: 0 auto;
   padding-left: 18px;
 }
+@media (max-width: 1225px) {
+  .restaurants {
+    max-width: 925px;
+  }
+}
+@media (max-width: 920px) {
+  .restaurants {
+    max-width: 614px;
+  }
+}
+
 .restaurants__header {
   display: flex;
   justify-content: space-between;
@@ -218,6 +299,7 @@ body {
   margin-bottom: 10.5px;
 }
 .restaurants__header h1 {
+  font-family: Akrobat-Regular;
   font-size: 30px;
   font-weight: 500;
   line-height: 35px;
@@ -229,6 +311,7 @@ body {
   line-height: 17.58px;
   opacity: 60%;
   margin-bottom: 4px;
+  margin-right: 20px;
 }
 .restaurants__header div::first-letter {
   text-transform: capitalize;
@@ -236,16 +319,24 @@ body {
 .restaurants__header div:hover {
   opacity: 100%;
 }
-.restaurants__items-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 20px;
-  overflow: hidden;
+@media (max-width: 620px) {
+  .restaurants {
+    margin-top: 24px;
+    /* max-width: 614px; */
+  }
+  .restaurants__header h1 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .restaurants__header div {
+    display: none;
+  }
 }
-
+.restaurants__items-row {
+  position: relative;
+}
 .restaurants__item {
-  min-width: 286px;
+  width: 100%;
 }
 .restaurants__img {
   width: 100%;
@@ -299,12 +390,12 @@ body {
   line-height: 125%;
   margin-bottom: 2.5px;
 }
-.description-left-kitchen {
+.description__left-kitchen {
   display: flex;
   align-items: center;
   margin-bottom: 2.5px;
 }
-.description-left-kitchen span {
+.description__left-kitchen span {
   margin-left: 10.5px;
   color: rgba(88, 75, 77, 1);
   font-size: 11px;
@@ -348,8 +439,12 @@ body {
   column-gap: 5px;
   margin-bottom: 4px;
 }
+.adaptive__price {
+  display: none;
+}
+
 .description__right-rate span:nth-child(2) {
-  /* font-family: Inter; */
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 14px;
@@ -379,13 +474,61 @@ body {
   line-height: 13.75px;
   color: rgba(132, 113, 115, 1);
 }
-
-.active {
-  height: 200px;
+.swiper-button-next-img {
+  position: absolute;
+  bottom: 46%;
+  right: -20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(246, 246, 246, 1);
+  z-index: 3 !important;
+}
+.swiper-button-next-img img:hover {
+  fill: #754040;
+}
+@media (max-width: 620px) {
+  .description__left-title {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .description__left-location {
+    font-size: 13px;
+  }
+  .description__left-kitchen span {
+    font-size: 13px;
+  }
+  .description__left-price {
+    display: none;
+  }
+  .order__0 {
+    order: 1;
+  }
+  .description__right-rate span:nth-child(2) {
+    font-size: 16px;
+  }
+  .description__right-rate span:last-child {
+    display: none;
+  }
+  .description__right-road {
+    display: none;
+  }
+  .description__right-length {
+    display: none;
+  }
+  .adaptive__price {
+    display: flex;
+  }
 }
 
-/* bread crumbs пробелы не подойдут? */
-/* restaurants open градиент? */
-/* при адаптивной верстке контейнер съезжает решить паддингом или зафиксировать по другому? */
-/* iter, roboto, acrobat */
+.location__container-active {
+  height: 112px;
+  padding: 10px 18px 4px 18px;
+}
+
+/* ширина картинки min width 360+ */
+/* поменять  p на ссылки*/
+/* user select */
