@@ -1,3 +1,5 @@
+import "./index.css";
+
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -40,9 +42,21 @@ let locationContainerLanguages = document.querySelector(
 let closeBtn = document.querySelector(".location__container-close");
 
 let languages = [
-  { name: "russian", src: "./img/russiaFlag.png", selected: true },
-  { name: "english", src: "./img/en.png", selected: false },
-  { name: "espanol", src: "./img/es.png", selected: false },
+  {
+    name: "russian",
+    src: require("../images/russiaFlag.png"),
+    selected: true,
+  },
+  {
+    name: "english",
+    src: require("../images/en.png"),
+    selected: false,
+  },
+  {
+    name: "espanol",
+    src: require("../images/es.png"),
+    selected: false,
+  },
 ];
 
 function renderLanguages(arr) {

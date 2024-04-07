@@ -1,3 +1,4 @@
+@import url(../vendor/fonts/fonts.css);
 * {
   padding: 0;
   margin: 0;
@@ -80,10 +81,7 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
-@font-face {
-  font-family: Akrobat-Regular;
-  src: url("/fonts/Akrobat-Regular.otf");
-}
+
 body {
   background-color: #f6f6f6;
   padding-top: 18px;
@@ -182,7 +180,6 @@ body {
   position: absolute;
   top: -11px;
   right: -10px;
-
   width: 165px;
   height: 0px;
   overflow: hidden;
@@ -190,6 +187,7 @@ body {
   box-shadow: 0px 0px 8px 0px rgba(134, 135, 137, 0.25);
   background: rgb(255, 255, 255);
   transition: all 0.3s ease 0s;
+  z-index: 2;
 }
 .location__container-close {
   position: relative;
@@ -246,6 +244,10 @@ body {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
+  }
+  .location__container {
+    top: -1px;
+    right: 0px;
   }
 }
 /* теги */
@@ -348,7 +350,7 @@ body {
 .restaurants__img {
   width: 100%;
   height: 192px;
-  background-image: url(./img/restaurant.png);
+  background-image: url(../images/restaurant.png);
   background-size: cover;
   border-radius: 20px;
   margin-bottom: 8.5px;
@@ -518,10 +520,24 @@ body {
 .swiper-button-disabled {
   opacity: 0;
 }
-.swiper-button-next-img img:hover {
-  fill: #754040;
+/* .swiper-button-disabled:hover {
+  opacity: 0;
+} */
+.swiper-button-next-img:hover {
+  opacity: 1 !important;
+  /* background-color: aqua; */
 }
-.swiper-button-prev-img img {
+.swiper-button-prev-img:hover {
+  opacity: 1 !important;
+  background-color: none;
+}
+/* .swiper-button-prev-img:hover path {
+  fill: #583030 !important;
+} */
+.swiper-button-next-img:hover path {
+  fill: #754040 !important;
+}
+.swiper-button-prev-img svg {
   transform: rotate(180deg);
 }
 @media (max-width: 620px) {

@@ -15,17 +15,18 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__row">
-        <img class="header__logo" src="./img/logo.png" alt="" />
+        <img
+          class="header__logo"
+          src=" <%=require( './images/logo.png')%>"
+          alt=""
+        />
         <img
           class="header__logo-adaptive"
-          src="./img/Link → logo_restaurantguru.svg.png"
+          src="<%=require('./images/Link → logo_restaurantguru.svg.png')%>"
           alt=""
         />
         <nav class="header__nav">
@@ -41,19 +42,19 @@
             <input class="header__input-2" type="text" placeholder="москва" />
           </div>
           <button class="search__btn">
-            <img src="./img/Vector.png" alt="" />
+            <img src="<%=require('./images/Vector.png')%>" alt="" />
           </button>
           <div class="header__location">
             <img
               class="mainFlag"
               style="cursor: pointer"
-              src="./img/russiaFlag.png"
+              src="<%=require('./images/russiaFlag.png')%>"
               alt=""
             />
             <div class="location__container">
               <div class="location__container-close">
-                <img src="./img/Vector.svg" alt="" />
-                <img src="./img/Vector (1).svg" alt="" />
+                <img src="<%=require('./images/Vector.svg')%>" alt="" />
+                <img src="<%=require('./images/Vector (1).svg')%>" alt="" />
               </div>
               <div class="location__container-languages"></div>
             </div>
@@ -96,33 +97,43 @@
                         <span style="text-transform: capitalize">подольск</span>
                       </p>
                       <p class="description__left-kitchen">
-                        <img src="./img/restaurant_menu.png" alt="" /><span
-                          >европейская, итальянская</span
-                        >
+                        <img
+                          src="<%=require('./images/restaurant_menu.png')%>"
+                          alt=""
+                        /><span>европейская, итальянская</span>
                       </p>
                       <div class="description__left-price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                         <p class="price__line"></p>
                         <p class="price__receipt">
-                          <img src="./img/receipt_long.png" alt="" /><span
-                            >cредний чек: 1200₽</span
-                          >
+                          <img
+                            src="<%=require('./images/receipt_long.png')%>"
+                            alt=""
+                          /><span>cредний чек: 1200₽</span>
                         </p>
                       </div>
                     </div>
                     <div class="description__right">
                       <p class="description__right-rate">
-                        <img src="./img/family_star.png" alt="" /><span
-                          >4.2</span
-                        ><span>(842)</span>
+                        <img
+                          src="<%=require('./images/family_star.png')%>"
+                          alt=""
+                        /><span>4.2</span><span>(842)</span>
                       </p>
                       <p class="adaptive__price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                       </p>
                       <p class="description__right-road">
-                        <img src="./img/directions_car.png" alt="" /><span
-                          >12 мин</span
-                        >
+                        <img
+                          src="<%=require('./images/directions_car.png')%>"
+                          alt=""
+                        /><span>12 мин</span>
                       </p>
                       <p class="description__right-length">6,2 км</p>
                     </div>
@@ -144,33 +155,43 @@
                         <span style="text-transform: capitalize">подольск</span>
                       </p>
                       <p class="description__left-kitchen">
-                        <img src="./img/restaurant_menu.png" alt="" /><span
-                          >европейская, итальянская</span
-                        >
+                        <img
+                          src="<%=require('./images/restaurant_menu.png')%>"
+                          alt=""
+                        /><span>европейская, итальянская</span>
                       </p>
                       <div class="description__left-price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                         <p class="price__line"></p>
                         <p class="price__receipt">
-                          <img src="./img/receipt_long.png" alt="" /><span
-                            >cредний чек: 1200₽</span
-                          >
+                          <img
+                            src="<%=require('./images/receipt_long.png')%>"
+                            alt=""
+                          /><span>cредний чек: 1200₽</span>
                         </p>
                       </div>
                     </div>
                     <div class="description__right">
                       <p class="description__right-rate">
-                        <img src="./img/family_star.png" alt="" /><span
-                          >4.2</span
-                        ><span>(842)</span>
+                        <img
+                          src="<%=require('./images/family_star.png')%>"
+                          alt=""
+                        /><span>4.2</span><span>(842)</span>
                       </p>
                       <p class="adaptive__price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                       </p>
                       <p class="description__right-road">
-                        <img src="./img/directions_car.png" alt="" /><span
-                          >12 мин</span
-                        >
+                        <img
+                          src="<%=require('./images/directions_car.png')%>"
+                          alt=""
+                        /><span>12 мин</span>
                       </p>
                       <p class="description__right-length">6,2 км</p>
                     </div>
@@ -192,33 +213,43 @@
                         <span style="text-transform: capitalize">подольск</span>
                       </p>
                       <p class="description__left-kitchen">
-                        <img src="./img/restaurant_menu.png" alt="" /><span
-                          >европейская, итальянская</span
-                        >
+                        <img
+                          src="<%=require('./images/restaurant_menu.png')%>"
+                          alt=""
+                        /><span>европейская, итальянская</span>
                       </p>
                       <div class="description__left-price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                         <p class="price__line"></p>
                         <p class="price__receipt">
-                          <img src="./img/receipt_long.png" alt="" /><span
-                            >cредний чек: 1200₽</span
-                          >
+                          <img
+                            src="<%=require('./images/receipt_long.png')%>"
+                            alt=""
+                          /><span>cредний чек: 1200₽</span>
                         </p>
                       </div>
                     </div>
                     <div class="description__right">
                       <p class="description__right-rate">
-                        <img src="./img/family_star.png" alt="" /><span
-                          >4.2</span
-                        ><span>(842)</span>
+                        <img
+                          src="<%=require('./images/family_star.png')%>"
+                          alt=""
+                        /><span>4.2</span><span>(842)</span>
                       </p>
                       <p class="adaptive__price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                       </p>
                       <p class="description__right-road">
-                        <img src="./img/directions_car.png" alt="" /><span
-                          >12 мин</span
-                        >
+                        <img
+                          src="<%=require('./images/directions_car.png')%>"
+                          alt=""
+                        /><span>12 мин</span>
                       </p>
                       <p class="description__right-length">6,2 км</p>
                     </div>
@@ -240,33 +271,43 @@
                         <span style="text-transform: capitalize">подольск</span>
                       </p>
                       <p class="description__left-kitchen">
-                        <img src="./img/restaurant_menu.png" alt="" /><span
-                          >европейская, итальянская</span
-                        >
+                        <img
+                          src="<%=require('./images/restaurant_menu.png')%>"
+                          alt=""
+                        /><span>европейская, итальянская</span>
                       </p>
                       <div class="description__left-price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                         <p class="price__line"></p>
                         <p class="price__receipt">
-                          <img src="./img/receipt_long.png" alt="" /><span
-                            >cредний чек: 1200₽</span
-                          >
+                          <img
+                            src="<%=require('./images/receipt_long.png')%>"
+                            alt=""
+                          /><span>cредний чек: 1200₽</span>
                         </p>
                       </div>
                     </div>
                     <div class="description__right">
                       <p class="description__right-rate">
-                        <img src="./img/family_star.png" alt="" /><span
-                          >4.2</span
-                        ><span>(842)</span>
+                        <img
+                          src="<%=require('./images/family_star.png')%>"
+                          alt=""
+                        /><span>4.2</span><span>(842)</span>
                       </p>
                       <p class="adaptive__price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                       </p>
                       <p class="description__right-road">
-                        <img src="./img/directions_car.png" alt="" /><span
-                          >12 мин</span
-                        >
+                        <img
+                          src="<%=require('./images/directions_car.png')%>"
+                          alt=""
+                        /><span>12 мин</span>
                       </p>
                       <p class="description__right-length">6,2 км</p>
                     </div>
@@ -288,33 +329,43 @@
                         <span style="text-transform: capitalize">подольск</span>
                       </p>
                       <p class="description__left-kitchen">
-                        <img src="./img/restaurant_menu.png" alt="" /><span
-                          >европейская, итальянская</span
-                        >
+                        <img
+                          src="<%=require('./images/restaurant_menu.png')%>"
+                          alt=""
+                        /><span>европейская, итальянская</span>
                       </p>
                       <div class="description__left-price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                         <p class="price__line"></p>
                         <p class="price__receipt">
-                          <img src="./img/receipt_long.png" alt="" /><span
-                            >cредний чек: 1200₽</span
-                          >
+                          <img
+                            src="<%=require('./images/receipt_long.png')%>"
+                            alt=""
+                          /><span>cредний чек: 1200₽</span>
                         </p>
                       </div>
                     </div>
                     <div class="description__right">
                       <p class="description__right-rate">
-                        <img src="./img/family_star.png" alt="" /><span
-                          >4.2</span
-                        ><span>(842)</span>
+                        <img
+                          src="<%=require('./images/family_star.png')%>"
+                          alt=""
+                        /><span>4.2</span><span>(842)</span>
                       </p>
                       <p class="adaptive__price">
-                        <img src="./img/Ценовой сегмент _ Похожее.png" alt="" />
+                        <img
+                          src="<%=require('./images/Ценовой сегмент _ Похожее.png')%>"
+                          alt=""
+                        />
                       </p>
                       <p class="description__right-road">
-                        <img src="./img/directions_car.png" alt="" /><span
-                          >12 мин</span
-                        >
+                        <img
+                          src="<%=require('./images/directions_car.png')%>"
+                          alt=""
+                        /><span>12 мин</span>
                       </p>
                       <p class="description__right-length">6,2 км</p>
                     </div>
@@ -325,10 +376,88 @@
 
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev-img">
-              <img src="./img/rightBtn.svg" alt="" />
+              <svg
+                width="15"
+                height="23"
+                viewBox="0 0 15 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_23_20449)">
+                  <mask
+                    id="mask0_23_20449"
+                    style="mask-type: luminance"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="15"
+                    height="23"
+                  >
+                    <path
+                      d="M14.125 0.25H0.625V22.75H14.125V0.25Z"
+                      fill="white"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_23_20449)">
+                    <path
+                      d="M9.86506 11.5L1.70132 19.5776C1.10876 20.1639 1.10876 21.1211 1.70132 21.7074C2.28506 22.285 3.22497 22.285 3.8087 21.7074L11.995 13.6075L14.125 11.5L11.995 9.39249L3.8087 1.29256C3.22497 0.714981 2.28506 0.71498 1.70132 1.29256C1.10876 1.87887 1.10876 2.83611 1.70132 3.42242L9.86506 11.5Z"
+                      fill="#616161"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_23_20449">
+                    <rect
+                      width="14"
+                      height="23"
+                      fill="white"
+                      transform="translate(0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
             <div class="swiper-button-next-img">
-              <img src="./img/rightBtn.svg" alt="" />
+              <svg
+                width="15"
+                height="23"
+                viewBox="0 0 15 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_23_20449)">
+                  <mask
+                    id="mask0_23_20449"
+                    style="mask-type: luminance"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="15"
+                    height="23"
+                  >
+                    <path
+                      d="M14.125 0.25H0.625V22.75H14.125V0.25Z"
+                      fill="white"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_23_20449)">
+                    <path
+                      d="M9.86506 11.5L1.70132 19.5776C1.10876 20.1639 1.10876 21.1211 1.70132 21.7074C2.28506 22.285 3.22497 22.285 3.8087 21.7074L11.995 13.6075L14.125 11.5L11.995 9.39249L3.8087 1.29256C3.22497 0.714981 2.28506 0.71498 1.70132 1.29256C1.10876 1.87887 1.10876 2.83611 1.70132 3.42242L9.86506 11.5Z"
+                      fill="#616161"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_23_20449">
+                    <rect
+                      width="14"
+                      height="23"
+                      fill="white"
+                      transform="translate(0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
           </div>
         </div>
@@ -337,10 +466,11 @@
     <footer></footer>
     <template id="language">
       <div class="location">
-        <img class="languageFlag" src="./img/en.png" alt="" /><span
-          class="languageName"
-          >english</span
-        >
+        <img
+          class="languageFlag"
+          src="<%=require('./images/en.png')%>"
+          alt=""
+        /><span class="languageName">english</span>
       </div>
     </template>
   </body>
